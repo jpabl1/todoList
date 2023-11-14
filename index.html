@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style/style.css">
+  <script type="text/javascript" src="src/js/jquery-3.7.1.min.js"></script>
+  <title>TODO-list</title>
+</head>
+<body>
+
+  <!-- Animacion -->
+  <div class="area" >
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  
+  <div class="context">
+    
+    <nav>
+      <div class="navbar-home">
+        <div class="title">
+          <h1>TODO-list</h1>
+        </div>
+        <div class="options">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Configure</a></li>
+          </ul>
+        </div>
+        <div class="toolbox">
+          <h1>...</h1>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="crud-todo">
+
+      <div class="form-todo">
+        <form action="">
+          <h3>Add</h3>
+          <label for="name-todo">Name:</label>
+          <input type="text" id="name-todo" value="Actividad de ejemplo">
+          <label for="description-todo">Description:</label>
+          <textarea id="description-todo" cols="30" rows="10">Esta sería un texto de ejemplo.</textarea>
+          <input type="button" id="addButton" value="ADD">
+          <input type="button" id="cleanButton" value="CLEAN">
+        </form>
+      </div>
+
+      <div class="list-todo">
+        <h3>To Do</h3>
+        <table class="table-list-todo">
+          
+        </table>
+      </div>
+    
+    </div>
+
+  </div>
+  
+  <script src="src/js/app.js"></script>
+</body>
+</html>

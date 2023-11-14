@@ -1,0 +1,232 @@
+
+/* only screen and (max-width: 600px) */
+
+/* Si lo ponemos aqui, no se muestra el display */
+/* @media screen and (max-width: 412px) {
+  * { font-family: sans-serif; font-size: 3.2vw; }
+  .prueba { display: block; }
+} */
+
+* { 
+  font-family: "Arial", sans-serif;
+  font-size: 1.5vw;
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
+}
+
+.context {
+  width: 100%;
+  position: absolute;
+  top:2.5vh;
+}
+
+.navbar-home {
+  margin: 0px auto;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: auto;
+  justify-items: center; 
+  display: flex;
+}
+
+.navbar-home ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-home li {
+  font-weight: bold;
+  padding: 0 15px;
+}
+
+.navbar-home a {
+  text-decoration: none;
+}
+
+.toolbox {
+  display: none;
+}
+ 
+.crud-todo {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+}
+
+.form-todo {
+  width: 30%;
+}
+
+.list-todo {
+  width: 70%;
+}
+
+.list-todo table {
+  margin: 0px auto;
+  width: 80%;
+}
+
+h3 {
+  text-align: center;
+}
+
+td {
+  padding: 5px;
+  text-align: justify;
+}
+
+input[type=text], input[type=button] , select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+/* el display inline block me ayudo solo con los elementos dentro del div
+o mejor dicho de .form-todo */
+
+@media screen and ( max-width: 700px ) {
+  * { font-size: 3.2vw; }
+  .options { display: none }
+  .toolbox { display: block; }
+  .toolbox:active { display: none; }
+  .toolbox:active .options { display: block; }
+  .crud-todo { width: 80%; margin: 12px auto; display: inline-block; }
+  .form-todo { width: 80%; margin: 0px auto; }
+}
+
+
+
+/* parte animacion de fondo */
+
+::selection {
+  color: #4e54c8;
+  background: #fff;
+}
+
+.area{
+  background: #4e54c8;  
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+  width: 100%;
+  height:100vh; 
+}
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
+}
