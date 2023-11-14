@@ -2,4 +2,6 @@
 
 ## Descripción del proyecto
 
-En este proyecto hace uso del Javascript, JQuery, y también de localStorage que viene por defecto en el Javascript. Basicamente creas una lista de actividades mediante vas añadiendo. 
+Simplemente aqui puedes crear una lista de actividades. Usando Javascript y su librería que viene predeterminada "localStorage".
+
+https://jpabl1.github.io/todoList/
