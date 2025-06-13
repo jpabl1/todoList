@@ -59,6 +59,16 @@
 
 .form-todo {
   width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 20px;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+}
+
+.description-task {
+  resize: none;
+
 }
 
 .list-todo {
