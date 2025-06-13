@@ -49,11 +49,11 @@
 
       <div class="form-todo">
         <form action="">
-          <h3>Add</h3>
-          <label for="name-todo">Name:</label>
-          <input type="text" id="name-todo" value="Actividad de ejemplo">
+          <h3>Create Task</h3>
+          <label for="name-todo">Title:</label>
+          <input type="text" id="name-todo" value="Actividad de ejemplo" required>
           <label for="description-todo">Description:</label>
-          <textarea id="description-todo" cols="30" rows="10">Esta sería un texto de ejemplo.</textarea>
+          <textarea id="description-todo" class="description-task" cols="30" rows="10" required>Esta sería un texto de ejemplo.</textarea>
           <input type="button" id="addButton" value="ADD">
           <input type="button" id="cleanButton" value="CLEAN">
         </form>
