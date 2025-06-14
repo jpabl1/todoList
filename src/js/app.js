@@ -3,11 +3,11 @@ $(document).ready( function () {
   
   showToDoList();
 
-  $('#addButton').on('click', function () {
+  $('#createTaskButton').on('click', function () {
 
     let todo = [
-            document.querySelector("#name-todo").value,
-            document.querySelector("#description-todo").value
+            document.querySelector("#task-title").value,
+            document.querySelector("#task-description").value
           ];
 
     if(Validator.isValueFieldValid(todo[0]) && Validator.isValueFieldValid(todo[1])) {
