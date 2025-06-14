@@ -1,25 +1,33 @@
-// const todoList = [1,2,3,4,5];
-// localStorage.setItem( "todoStorage", todoList );
 
 $(document).ready( function () {
   
   showToDoList();
 
   $('#addButton').on('click', function () {
-    $('.table-list-todo').hide(500, function () {
-      let todo = [
-        document.querySelector("#name-todo").value,
-        document.querySelector("#description-todo").value
-      ];
-  
-      let todoList = localStorage.getItem("todoStorage") ? JSON.parse(localStorage.getItem("todoStorage")) : [];
-      todoList.push(todo);
-      localStorage.setItem("todoStorage", JSON.stringify(todoList));
-      console.table( todoList );
-      console.log("Se ha guardado exitosamente.");
-      showToDoList();
-      $('.table-list-todo').show(500);
-    });
+
+    let todo = [
+            document.querySelector("#name-todo").value,
+            document.querySelector("#description-todo").value
+          ];
+
+    if(Validator.isValueFieldValid(todo[0]) && Validator.isValueFieldValid(todo[1])) {
+
+      $('.table-list-todo').hide(500, function () {
+            let todoList = localStorage.getItem("todoStorage") ? JSON.parse(localStorage.getItem("todoStorage")) : [];
+            todoList.push(todo);
+            localStorage.setItem("todoStorage", JSON.stringify(todoList));
+            console.table( todoList );
+            console.log("Se ha guardado exitosamente.");
+            showToDoList();
+            $('.table-list-todo').show(500);
+          });
+
+    } else {
+
+      alert("All fields are required to create a task");
+
+    }
+
   });
 
   $('#cleanButton').on('click', function () {
