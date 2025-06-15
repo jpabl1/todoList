@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     showToDoList();
 
-    $('#createTaskButton').on('click', function () {
+    $('#saveButton').on('click', function () {
 
         let taskTitle = document.querySelector('#task-title').value;
         let taskDescription = document.querySelector('#task-description').value;
